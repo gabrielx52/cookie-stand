@@ -111,11 +111,38 @@ table {
   /*height: 4em;*/
 }
 
+tr:nth-child(odd){
+  background-color: grey;
+}
+
 table * {
-  border: thin red solid;
+  /*border: thin red solid;*/
+}
+tr {
+  font-size: 1.2em;
+}
+
+#tableHeader {
+  background-color: black;
+  color: white;
+}
+
+td {
+  text-align: right;
+  padding: 2px;
 }
 
 th {
   font-weight: bold;
   margin: 3em;
+  padding: 2px;
+}
+
+#totalHeading {
+  background-color: red;
+}
+
+
+.lastCel {
+
 }

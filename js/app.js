@@ -35,6 +35,7 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
     };
     var totalCel = document.createElement('td');
     totalCel.innerText = this.totalSold;
+    totalCel.setAttribute('class', 'lastCel');
     tableRow.appendChild(totalCel);
   };
 };
@@ -44,6 +45,7 @@ var headerMaker = function() {
   var tableHeader = document.createElement('table');
   cont.appendChild(tableHeader);
   var tableRow = document.createElement('tr');
+  tableRow.setAttribute('id', 'tableHeader');
   tableHeader.appendChild(tableRow);
   var head = document.createElement('th');
   tableHeader.setAttribute('id', 'header');
@@ -55,6 +57,7 @@ var headerMaker = function() {
   };
   var totalHeadCel = document.createElement('th');
   totalHeadCel.innerText = 'Daily Location Total';
+  totalHeadCel.setAttribute('id', 'totalHeading');
   tableRow.appendChild(totalHeadCel);
 };
 
