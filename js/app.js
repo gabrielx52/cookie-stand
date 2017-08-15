@@ -13,17 +13,15 @@ var firstPike = {
   },
   dailySalesGen: function() {
     for(var i = 0; i < this.hoursOfOp.length; i++) {
-      this.salesReport.push(this.hoursOfOp[i] + ': ' + Math.floor(this.avgCookPH * this.randomCust()) + ' cookies');
-      this.totalSold += Math.floor(this.avgCookPH * this.randomCust());
+      var hourTotal = Math.floor(this.avgCookPH * this.randomCust());
+      this.salesReport.push(this.hoursOfOp[i] + ': ' + hourTotal + ' cookies');
+      this.totalSold += hourTotal;
     }
-  },
-  dailyTotal: function() {
-    this.salesReport.push('Total: ' + this.totalSold);
   },
   finalReportCreator: function() {
     this.salesReport.push(this.store);
     this.dailySalesGen();
-    this.dailyTotal();
+    this.salesReport.push('Total: ' + this.totalSold);
   }
 };
 
@@ -40,17 +38,15 @@ var seaTac = {
   },
   dailySalesGen: function() {
     for(var i = 0; i < this.hoursOfOp.length; i++) {
-      this.salesReport.push(this.hoursOfOp[i] + ': ' + Math.floor(this.avgCookPH * this.randomCust()) + ' cookies');
-      this.totalSold += Math.floor(this.avgCookPH * this.randomCust());
+      var hourTotal = Math.floor(this.avgCookPH * this.randomCust());
+      this.salesReport.push(this.hoursOfOp[i] + ': ' + hourTotal + ' cookies');
+      this.totalSold += hourTotal;
     }
-  },
-  dailyTotal: function() {
-    this.salesReport.push('Total: ' + this.totalSold);
   },
   finalReportCreator: function() {
     this.salesReport.push(this.store);
     this.dailySalesGen();
-    this.dailyTotal();
+    this.salesReport.push('Total: ' + this.totalSold);
   }
 };
 
@@ -67,17 +63,15 @@ var seaCenter = {
   },
   dailySalesGen: function() {
     for(var i = 0; i < this.hoursOfOp.length; i++) {
-      this.salesReport.push(this.hoursOfOp[i] + ': ' + Math.floor(this.avgCookPH * this.randomCust()) + ' cookies');
-      this.totalSold += Math.floor(this.avgCookPH * this.randomCust());
+      var hourTotal = Math.floor(this.avgCookPH * this.randomCust());
+      this.salesReport.push(this.hoursOfOp[i] + ': ' + hourTotal + ' cookies');
+      this.totalSold += hourTotal;
     }
-  },
-  dailyTotal: function() {
-    this.salesReport.push('Total: ' + this.totalSold);
   },
   finalReportCreator: function() {
     this.salesReport.push(this.store);
     this.dailySalesGen();
-    this.dailyTotal();
+    this.salesReport.push('Total: ' + this.totalSold);
   }
 };
 
@@ -94,17 +88,15 @@ var capHill = {
   },
   dailySalesGen: function() {
     for(var i = 0; i < this.hoursOfOp.length; i++) {
-      this.salesReport.push(this.hoursOfOp[i] + ': ' + Math.floor(this.avgCookPH * this.randomCust()) + ' cookies');
-      this.totalSold += Math.floor(this.avgCookPH * this.randomCust());
+      var hourTotal = Math.floor(this.avgCookPH * this.randomCust());
+      this.salesReport.push(this.hoursOfOp[i] + ': ' + hourTotal + ' cookies');
+      this.totalSold += hourTotal;
     }
-  },
-  dailyTotal: function() {
-    this.salesReport.push('Total: ' + this.totalSold);
   },
   finalReportCreator: function() {
     this.salesReport.push(this.store);
     this.dailySalesGen();
-    this.dailyTotal();
+    this.salesReport.push('Total: ' + this.totalSold);
   }
 };
 
@@ -121,17 +113,15 @@ var alki = {
   },
   dailySalesGen: function() {
     for(var i = 0; i < this.hoursOfOp.length; i++) {
-      this.salesReport.push(this.hoursOfOp[i] + ': ' + Math.floor(this.avgCookPH * this.randomCust()) + ' cookies');
-      this.totalSold += Math.floor(this.avgCookPH * this.randomCust());
+      var hourTotal = Math.floor(this.avgCookPH * this.randomCust());
+      this.salesReport.push(this.hoursOfOp[i] + ': ' + hourTotal + ' cookies');
+      this.totalSold += hourTotal;
     }
-  },
-  dailyTotal: function() {
-    this.salesReport.push('Total: ' + this.totalSold);
   },
   finalReportCreator: function() {
     this.salesReport.push(this.store);
     this.dailySalesGen();
-    this.dailyTotal();
+    this.salesReport.push('Total: ' + this.totalSold);
   }
 };
 
