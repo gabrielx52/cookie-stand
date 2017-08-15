@@ -104,3 +104,18 @@ h1 {
   float: left;
   margin-left: 5%;
 }
+
+table {
+  background-color: white;
+  margin: auto;
+  height: 4em;
+}
+
+table * {
+  border: thin red solid;
+}
+
+th {
+  font-weight: bold;
+  margin: 3em;
+}
