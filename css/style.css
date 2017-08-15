@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FFE1E6
+}
+
 a {
   text-decoration: none;
 }
@@ -26,7 +30,9 @@ nav {
 
 #navBar a {
   float: left;
-  margin: 0.5em 0 0.5em 14%;;
+  margin: 0.5em 0 0.5em 14%;
+  font-family: 'Alegreya', serif;
+  font-size: 1.5em;
 }
 
 .clearfix {
@@ -43,15 +49,52 @@ nav {
 }
 
 #salmon {
-  /*margin: 0 20% 1%;*/
-  /*float: left;*/
   position: absolute;
 }
 
 h1 {
-  margin-left: 20%;
+  margin-left: 4.6em;;
   z-index: 100;
   position: absolute;
-  color: red;
-  top: 8em;
+  color: rgba(40, 251, 138);
+  top: 2.5em;
+  font-family: 'Alegreya', serif;
+  font-size: 3em;
+}
+
+h2 {
+  text-align: center;
+}
+
+#canPic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20%;
+  border: 1em solid black;
+  margin-bottom: 4em;
+}
+
+.menuLists {
+  margin-top: 3em;
+  width: 18em;
+  height:12em;
+  font-size: 1.5em;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.25em solid black;
+  border-radius: 20%;
+}
+
+#leftMenu {
+  margin-top: 5%;
+  margin-left: 16%;
+  float: left;
+}
+
+#rightMenu {
+  margin-top: 5%;
+  float: left;
+  margin-left: 5%;
 }
