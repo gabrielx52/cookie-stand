@@ -108,7 +108,7 @@ h1 {
 table {
   background-color: white;
   margin: auto;
-  height: 4em;
+  /*height: 4em;*/
 }
 
 table * {
