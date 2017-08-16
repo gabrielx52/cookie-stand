@@ -40,6 +40,13 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
   };
 };
 
+
+
+
+
+
+
+
 var headerMaker = function() {
   var anchorPoint = document.getElementById('salesContent');
   var tableHeader = document.createElement('table');
@@ -59,6 +66,14 @@ var headerMaker = function() {
   totalHeadCel.innerText = 'Daily Location Total';
   tableRow.appendChild(totalHeadCel);
 };
+
+
+
+
+
+
+
+
 
 var footerMaker = function() {
   var anchorPoint = document.getElementById('header');

@@ -138,6 +138,22 @@ th {
   padding: 2px;
 }
 
+#paraBlock {
+  width: 30em;
+  height: 20em;
+  background-color: white;
+  border: 0.25em solid black;
+  border-radius: 20%;
+  margin: auto;
+}
+
+#aboutPara {
+  margin-top: 5em;
+  /*width: 28em;*/
+  /*height: 16em;*/
+
+}
+
 #disclaim {
   animation-name: flash;
   animation-duration: 0.2s;
@@ -145,7 +161,8 @@ th {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-play-state: running;
-  margin-left: 40%;
+  margin-left: 12em;
+  font-size: 1.5em;
 }
 
 @keyframes flash {
