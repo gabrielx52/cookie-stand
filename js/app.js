@@ -77,6 +77,16 @@ var footerMaker = function() {
   tableRow.appendChild(rightCel);
 };
 
+function addNewCookieStore(event) {
+  event.preventDefault();
+  var storeName = form.elements['storeName'].value;
+  var minCust = form.elements['minCust'].value;
+  var maxCust = form.elements['maxCust'].value;
+  var avgCPH = form.elements['avgCPH'].value;
+  var newStore = new CookieShop(storeName, minCust, maxCust, avgCPH);
+  newStore.render();
+}
+
 var pike = new CookieShop('1st and Pike', 23, 65, 6.3);
 var seaTac = new CookieShop('SeaTac Airport', 2, 24, 1.2);
 var seaCenter = new CookieShop('Seattle Center', 11, 38, 3.7);
@@ -96,6 +106,7 @@ var createAndAppend = function(newElementTag, className, idName, content, parent
   newElem.innerText = content;
   parentElement.appendChild(newElem);
 };
+//
 
 var tableMaker = function(locationArray){
   headerMaker();
@@ -104,5 +115,9 @@ var tableMaker = function(locationArray){
   }
   footerMaker();
 };
+
+
+var form = document.getElementById('addStoreForm');
+form.addEventListener('submit', addNewCookieStore);
 
 tableMaker(shopLocations);
