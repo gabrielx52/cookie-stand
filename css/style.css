@@ -28,9 +28,16 @@ nav {
   display: inline;
 }
 
-#navBar a {
+#navBarHome a {
   float: left;
-  margin: 0.5em 0 0.5em 14%;
+  margin: 0.5em 0 0.5em 16%;
+  font-family: 'Alegreya', serif;
+  font-size: 1.5em;
+}
+
+#navBarSales a {
+  float: left;
+  margin: 0.5em 45% 0.5em;
   font-family: 'Alegreya', serif;
   font-size: 1.5em;
 }
@@ -45,7 +52,6 @@ nav {
   position: relative;
   margin: auto;
   margin-bottom: 3em;
-  margin-top: 5em;
 }
 
 #salmon {
@@ -62,7 +68,7 @@ h1 {
   font-size: 3em;
 }
 
-h2 {
+#homeContent h2 {
   text-align: center;
 }
 
@@ -97,4 +103,69 @@ h2 {
   margin-top: 5%;
   float: left;
   margin-left: 5%;
+}
+
+table {
+  background-color: white;
+  margin: auto;
+}
+
+tr:nth-child(odd){
+  background-color: grey;
+}
+
+tr:nth-child(even){
+  background-color: lightblue;
+}
+
+tr {
+  font-size: 1.2em;
+}
+
+#tableHeader {
+  background-color: black;
+  color: white;
+}
+
+td {
+  text-align: right;
+  padding: 2px;
+}
+
+th {
+  font-weight: bold;
+  margin: 3em;
+  padding: 2px;
+}
+
+#paraBlock {
+  width: 30em;
+  height: 20em;
+  background-color: white;
+  border: 0.25em solid black;
+  border-radius: 20%;
+  margin: auto;
+}
+
+#aboutPara {
+  margin-top: 5em;
+  /*width: 28em;*/
+  /*height: 16em;*/
+
+}
+
+#disclaim {
+  animation-name: flash;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  margin-left: 12em;
+  font-size: 1.5em;
+}
+
+@keyframes flash {
+  from {color: red;}
+  to {color: black;}
 }
