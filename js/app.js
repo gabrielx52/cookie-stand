@@ -57,8 +57,22 @@ var headerMaker = function() {
   };
   var totalHeadCel = document.createElement('th');
   totalHeadCel.innerText = 'Daily Location Total';
-  totalHeadCel.setAttribute('id', 'totalHeading');
   tableRow.appendChild(totalHeadCel);
+};
+
+var footerMaker = function() {
+  var anchorPoint = document.getElementById('header');
+  var tableRow = document.createElement('tr');
+  anchorPoint.appendChild(tableRow);
+  var leftCel = document.createElement('th');
+  leftCel.innerText = 'Totals';
+  tableRow.appendChild(leftCel);
+  for (var i = 0; i < hoursOfOp.length; i++) {
+    var totalCel = document.createElement('td');
+    tableRow.appendChild(totalCel);
+  };
+  var rightCel = document.createElement('td');
+  tableRow.appendChild(rightCel);
 };
 
 var pike = new CookieShop('1st and Pike', 23, 65, 6.3);
@@ -73,3 +87,4 @@ seaTac.render();
 seaCenter.render();
 capHill.render();
 alki.render();
+footerMaker();

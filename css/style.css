@@ -108,16 +108,16 @@ h1 {
 table {
   background-color: white;
   margin: auto;
-  /*height: 4em;*/
 }
 
 tr:nth-child(odd){
   background-color: grey;
 }
 
-table * {
-  /*border: thin red solid;*/
+tr:nth-child(even){
+  background-color: lightblue;
 }
+
 tr {
   font-size: 1.2em;
 }
@@ -136,13 +136,4 @@ th {
   font-weight: bold;
   margin: 3em;
   padding: 2px;
-}
-
-#totalHeading {
-  background-color: red;
-}
-
-
-.lastCel {
-
 }
