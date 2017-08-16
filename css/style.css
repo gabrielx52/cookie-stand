@@ -122,6 +122,11 @@ tr {
   font-size: 1.2em;
 }
 
+tr:hover {
+  background-color: rgb(238, 40, 255);
+  color: rgb(227, 255, 0);
+}
+
 #tableHeader {
   background-color: black;
   color: white;
