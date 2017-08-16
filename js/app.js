@@ -41,9 +41,9 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
 };
 
 var headerMaker = function() {
-  var cont = document.getElementById('salesContent');
+  var anchorPoint = document.getElementById('salesContent');
   var tableHeader = document.createElement('table');
-  cont.appendChild(tableHeader);
+  anchorPoint.appendChild(tableHeader);
   var tableRow = document.createElement('tr');
   tableRow.setAttribute('id', 'tableHeader');
   tableHeader.appendChild(tableRow);

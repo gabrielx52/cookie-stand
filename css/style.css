@@ -137,3 +137,18 @@ th {
   margin: 3em;
   padding: 2px;
 }
+
+#disclaim {
+  animation-name: flash;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  margin-left: 40%;
+}
+
+@keyframes flash {
+  from {color: red;}
+  to {color: black;}
+}
