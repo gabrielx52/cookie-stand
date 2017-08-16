@@ -44,11 +44,13 @@ var headerMaker = function() {
   var anchorPoint = document.getElementById('salesContent');
   var tableHeader = document.createElement('table');
   anchorPoint.appendChild(tableHeader);
+  var tHead = document.createElement('thead');
+  tableHeader.appendChild(tHead);
   var tableRow = document.createElement('tr');
-  tableRow.setAttribute('id', 'tableHeader');
-  tableHeader.appendChild(tableRow);
+  tableRow.id = 'tableHeader';
+  tHead.appendChild(tableRow);
   var head = document.createElement('th');
-  tableHeader.setAttribute('id', 'header');
+  tableHeader.id = 'header';
   tableRow.appendChild(head);
   for (var i = 0; i < hoursOfOp.length; i++) {
     var hour = document.createElement('th');
@@ -61,7 +63,7 @@ var headerMaker = function() {
 };
 
 var footerMaker = function() {
-  var anchorPoint = document.getElementById('header');
+  var anchorPoint = document.getElementsByTagName('table')[0];
   var tableRow = document.createElement('tr');
   anchorPoint.appendChild(tableRow);
   var leftCel = document.createElement('th');
@@ -81,10 +83,26 @@ var seaCenter = new CookieShop('Seattle Center', 11, 38, 3.7);
 var capHill = new CookieShop('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieShop('Alki', 2, 16, 4.6);
 
-headerMaker();
-pike.render();
-seaTac.render();
-seaCenter.render();
-capHill.render();
-alki.render();
-footerMaker();
+var shopLocations = [pike, seaTac, seaCenter, capHill, alki];
+
+// Work in progress
+var createAndAppend = function(newElementTag, className, idName, content, parentElement) {
+  var newElem = document.createElement(newElementTag);
+  if(className && className !== '') {
+    newElem.className = className;
+  } if (idName && idName !== '') {
+    newElem.id = idName;
+  }
+  newElem.innerText = content;
+  parentElement.appendChild(newElem);
+};
+
+var tableMaker = function(locationArray){
+  headerMaker();
+  for (var i = 0; i < locationArray.length; i++) {
+    locationArray[i].render();
+  }
+  footerMaker();
+};
+
+tableMaker(shopLocations);
