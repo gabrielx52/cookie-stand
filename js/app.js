@@ -75,7 +75,6 @@ var alki = new CookieShop('Alki', 2, 16, 4.6);
 
 var shopLocations = [alki, capHill, seaCenter, seaTac, pike];
 
-// Work in progress
 function createAppend(newElementTag, className, idName, content, parentElement) {
   var newElem = document.createElement(newElementTag);
   if(className && className !== '') {
@@ -87,8 +86,6 @@ function createAppend(newElementTag, className, idName, content, parentElement) 
   parentElement.appendChild(newElem);
   return newElem;
 };
-//
-
 
 var tableMaker = function(locationArray){
   headerMaker();
