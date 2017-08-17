@@ -3,16 +3,16 @@
 var hoursOfOp = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function CookieShop(name, minCust, maxCust, avgCookPerPerson){
-  this.name = name,
-  this.minCust = minCust,
-  this.maxCust = maxCust,
-  this.avgCookPerPerson = avgCookPerPerson,
-  this.totalSold = 0,
-  this.salesReport = [],
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookPerPerson = avgCookPerPerson;
+  this.totalSold = 0;
+  this.salesReport = [];
   this.randomCust = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 
-  },
+  };
   this.dailySalesGen = function() {
     this.salesReport = [];
     for(var i = 0; i < hoursOfOp.length; i++) {
@@ -20,7 +20,7 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
       this.salesReport.push(hourTotal);
       this.totalSold += hourTotal;
     }
-  },
+  };
   this.render = function() {
     this.dailySalesGen();
     var cont = document.getElementById('header');
