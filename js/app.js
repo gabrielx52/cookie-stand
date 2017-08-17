@@ -8,27 +8,27 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
   this.maxCust = maxCust;
   this.avgCookPerPerson = avgCookPerPerson;
   this.totalSold = 0;
-  this.salesReport = [];
+  this.dailySalesReport = [];
   this.randomCust = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 
   };
   this.dailySalesGen = function() {
-    this.salesReport = [];
+    this.dailySalesReport = [];
     for(var i = 0; i < hoursOfOp.length; i++) {
       var hourTotal = Math.floor(this.avgCookPerPerson * this.randomCust());
-      this.salesReport.push(hourTotal);
+      this.dailySalesReport.push(hourTotal);
       this.totalSold += hourTotal;
     }
   };
   this.render = function() {
     this.dailySalesGen();
-    var cont = document.getElementById('header');
+    var cont = document.getElementById('salesTable');
     var tableRow = document.createElement('tr');
     cont.insertBefore(tableRow, cont.childNodes[1]);
     createAppend('th', '', '', this.name, tableRow);
-    for (var i = 0; i < this.salesReport.length; i++) {
-      createAppend('td', '', '', this.salesReport[i], tableRow);
+    for (var i = 0; i < this.dailySalesReport.length; i++) {
+      createAppend('td', '', '', this.dailySalesReport[i], tableRow);
     };
     createAppend('td', 'lastCel', '', this.totalSold, tableRow);
   };
@@ -36,7 +36,7 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
 
 var headerMaker = function() {
   var anchorPoint = document.getElementById('salesContent');
-  var tableHeader = createAppend('table', '', 'header', '', anchorPoint);
+  var tableHeader = createAppend('table', '', 'salesTable', '', anchorPoint);
   var tHead = createAppend('thead', '', '', '', tableHeader);
   var tableRow = createAppend('tr', '', 'tableHeader', '', tHead);
   var head = createAppend('th', '', '', '', tableRow);
@@ -54,7 +54,7 @@ var footerMaker = function() {
   for (var i = 0; i < hoursOfOp.length; i++) {
     var hourlyTotal = 0;
     for (var j = 0; j < shopLocations.length; j++) {
-      hourlyTotal += shopLocations[j].salesReport[i];
+      hourlyTotal += shopLocations[j].dailySalesReport[i];
     }
     var totalCel = createAppend('td', '', '', hourlyTotal, tableRow);
     grandTotal += hourlyTotal;
