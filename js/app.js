@@ -26,50 +26,34 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
     var cont = document.getElementById('header');
     var tableRow = document.createElement('tr');
     cont.insertBefore(tableRow, cont.childNodes[1]);
-    createAndAppend('th', '', '', this.name, tableRow);
+    createAppend('th', '', '', this.name, tableRow);
     for (var i = 0; i < this.salesReport.length; i++) {
-      createAndAppend('td', '', '', this.salesReport[i], tableRow);
+      createAppend('td', '', '', this.salesReport[i], tableRow);
     };
-    createAndAppend('td', 'lastCel', '', this.totalSold, tableRow);
+    createAppend('td', 'lastCel', '', this.totalSold, tableRow);
   };
 };
 
 var headerMaker = function() {
   var anchorPoint = document.getElementById('salesContent');
-  var tableHeader = createAndAppend('table', '', '', '', anchorPoint);
-  // var tableHeader = document.createElement('table');
-  // anchorPoint.appendChild(tableHeader);
-  var tHead = document.createElement('thead');
-  tableHeader.appendChild(tHead);
-  var tableRow = document.createElement('tr');
-  tableRow.id = 'tableHeader';
-  tHead.appendChild(tableRow);
-  var head = document.createElement('th');
-  tableHeader.id = 'header';
-  tableRow.appendChild(head);
+  var tableHeader = createAppend('table', '', 'header', '', anchorPoint);
+  var tHead = createAppend('thead', '', '', '', tableHeader);
+  var tableRow = createAppend('tr', '', 'tableHeader', '', tHead);
+  var head = createAppend('th', '', '', '', tableRow);
   for (var i = 0; i < hoursOfOp.length; i++) {
-    var hour = document.createElement('th');
-    hour.innerText = hoursOfOp[i];
-    tableRow.appendChild(hour);
+    var hour = createAppend('th', '', '', hoursOfOp[i], tableRow);
   };
-  var totalHeadCel = document.createElement('th');
-  totalHeadCel.innerText = 'Daily Location Total';
-  tableRow.appendChild(totalHeadCel);
+  var totalHeadCel = createAppend('th', '', '', 'Daily Location Total', tableRow);
 };
 
 var footerMaker = function() {
   var anchorPoint = document.getElementsByTagName('table')[0];
-  var tableRow = document.createElement('tr');
-  anchorPoint.appendChild(tableRow);
-  var leftCel = document.createElement('th');
-  leftCel.innerText = 'Totals';
-  tableRow.appendChild(leftCel);
+  var tableRow = createAppend('tr', '', '', '', anchorPoint);
+  var leftCel = createAppend('th', '', '', 'Totals', tableRow);
   for (var i = 0; i < hoursOfOp.length; i++) {
-    var totalCel = document.createElement('td');
-    tableRow.appendChild(totalCel);
+    var totalCel = createAppend('td', '', '', '', tableRow);
   };
-  var rightCel = document.createElement('td');
-  tableRow.appendChild(rightCel);
+  var rightCel = createAppend('td', '', '', '', tableRow);
 };
 
 function addNewCookieStore(event) {
@@ -92,7 +76,7 @@ var alki = new CookieShop('Alki', 2, 16, 4.6);
 var shopLocations = [alki, capHill, seaCenter, seaTac, pike];
 
 // Work in progress
-function createAndAppend(newElementTag, className, idName, content, parentElement) {
+function createAppend(newElementTag, className, idName, content, parentElement) {
   var newElem = document.createElement(newElementTag);
   if(className && className !== '') {
     newElem.className = className;
