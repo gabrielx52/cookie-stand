@@ -48,7 +48,7 @@ var headerMaker = function() {
 
 var footerMaker = function() {
   var anchorPoint = document.getElementsByTagName('table')[0];
-  var tableRow = createAppend('tr', '', '', '', anchorPoint);
+  var tableRow = createAppend('tr', '', 'totalsRow', '', anchorPoint);
   var leftCel = createAppend('th', '', '', 'Totals', tableRow);
   var grandTotal = 0;
   for (var i = 0; i < hoursOfOp.length; i++) {
@@ -70,6 +70,11 @@ function addNewCookieStore(event) {
   var avgCPH = parseFloat(form.elements['avgCPH'].value);
   var newStore = new CookieShop(storeName, minCust, maxCust, avgCPH);
   newStore.render();
+  shopLocations.push(newStore);
+  var oldFooter = document.getElementById('totalsRow');
+  var container = oldFooter.parentNode;
+  container.removeChild(oldFooter);
+  footerMaker();
   form.reset();
 }
 
