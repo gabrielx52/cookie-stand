@@ -105,39 +105,39 @@ h1 {
   margin-left: 5%;
 }
 
-table {
+#salesContent table {
   background-color: white;
   margin: auto;
 }
 
-tr:nth-child(odd){
+#salesContent tr:nth-child(odd){
   background-color: grey;
 }
 
-tr:nth-child(even){
+#salesContent tr:nth-child(even){
   background-color: lightblue;
 }
 
-tr {
+#salesContent tr {
   font-size: 1.2em;
 }
 
-tr:hover {
+#salesContent tr:hover {
   background-color: rgb(238, 40, 255);
   color: rgb(227, 255, 0);
 }
 
-#tableHeader {
+#salesContent #tableHeader {
   background-color: black;
   color: white;
 }
 
-td {
+#salesContent td {
   text-align: right;
   padding: 2px;
 }
 
-th {
+#salesContent th {
   font-weight: bold;
   margin: 3em;
   padding: 2px;
@@ -154,6 +154,23 @@ th {
 
 #aboutPara {
   margin-top: 5em;
+}
+label {
+  font-size: 0.75em;
+}
+
+form table {
+  margin: auto;
+  margin-top: 1em;
+}
+
+#formBox {
+  margin-top: 3em;
+  margin-left: 8.5%;
+  width: 25%;
+  height: 8em;
+  border: black solid thin;
+  background-color: white;
 }
 
 #disclaim {
