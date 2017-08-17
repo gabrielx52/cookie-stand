@@ -10,8 +10,7 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
   this.totalSold = 0,
   this.salesReport = [],
   this.randomCust = function() {
-    var rando =  Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-    return rando;
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 
   },
   this.dailySalesGen = function() {
@@ -27,25 +26,19 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
     var cont = document.getElementById('header');
     var tableRow = document.createElement('tr');
     cont.insertBefore(tableRow, cont.childNodes[1]);
-    var storeHeader = document.createElement('th');
-    storeHeader.innerText = this.name;
-    tableRow.appendChild(storeHeader);
+    createAndAppend('th', '', '', this.name, tableRow);
     for (var i = 0; i < this.salesReport.length; i++) {
-      var hour = document.createElement('td');
-      hour.innerText = this.salesReport[i];
-      tableRow.appendChild(hour);
+      createAndAppend('td', '', '', this.salesReport[i], tableRow);
     };
-    var totalCel = document.createElement('td');
-    totalCel.innerText = this.totalSold;
-    totalCel.setAttribute('class', 'lastCel');
-    tableRow.appendChild(totalCel);
+    createAndAppend('td', 'lastCel', '', this.totalSold, tableRow);
   };
 };
 
 var headerMaker = function() {
   var anchorPoint = document.getElementById('salesContent');
-  var tableHeader = document.createElement('table');
-  anchorPoint.appendChild(tableHeader);
+  var tableHeader = createAndAppend('table', '', '', '', anchorPoint);
+  // var tableHeader = document.createElement('table');
+  // anchorPoint.appendChild(tableHeader);
   var tHead = document.createElement('thead');
   tableHeader.appendChild(tHead);
   var tableRow = document.createElement('tr');
@@ -84,13 +77,7 @@ function addNewCookieStore(event) {
   var storeName = form.elements['storeName'].value;
   var minCust = parseInt(form.elements['minCust'].value);
   var maxCust = parseInt(form.elements['maxCust'].value);
-  console.log(form.elements['avgCPH'].value);
-  console.log(typeof form.elements['avgCPH'].value);
   var avgCPH = parseFloat(form.elements['avgCPH'].value);
-  console.log(typeof minCust);
-  console.log(typeof maxCust);
-  console.log(typeof avgCPH);
-  console.log(avgCPH);
   var newStore = new CookieShop(storeName, minCust, maxCust, avgCPH);
   newStore.render();
   form.reset();
@@ -102,11 +89,10 @@ var seaCenter = new CookieShop('Seattle Center', 11, 38, 3.7);
 var capHill = new CookieShop('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieShop('Alki', 2, 16, 4.6);
 
-// var shopLocations = [alki, capHill, seaCenter, seaTac, pike];
-var shopLocations = [pike];
+var shopLocations = [alki, capHill, seaCenter, seaTac, pike];
 
 // Work in progress
-var createAndAppend = function(newElementTag, className, idName, content, parentElement) {
+function createAndAppend(newElementTag, className, idName, content, parentElement) {
   var newElem = document.createElement(newElementTag);
   if(className && className !== '') {
     newElem.className = className;
@@ -115,8 +101,10 @@ var createAndAppend = function(newElementTag, className, idName, content, parent
   }
   newElem.innerText = content;
   parentElement.appendChild(newElem);
+  return newElem;
 };
 //
+
 
 var tableMaker = function(locationArray){
   headerMaker();
