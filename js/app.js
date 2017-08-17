@@ -67,8 +67,8 @@ function addNewCookieStore(event) {
   var storeName = form.elements['storeName'].value;
   var minCust = parseInt(form.elements['minCust'].value);
   var maxCust = parseInt(form.elements['maxCust'].value);
-  var avgCPH = parseFloat(form.elements['avgCPH'].value);
-  var newStore = new CookieShop(storeName, minCust, maxCust, avgCPH);
+  var avgCPP = parseFloat(form.elements['avgCPP'].value);
+  var newStore = new CookieShop(storeName, minCust, maxCust, avgCPP);
   newStore.render();
   shopLocations.push(newStore);
   var oldFooter = document.getElementById('totalsRow');
