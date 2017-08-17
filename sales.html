@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Alegreya:900" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <title>Homeport</title>
+    <title>Sales Data</title>
   </head>
   <body>
     <header>
@@ -35,15 +35,15 @@
           </tr>
           <tr>
             <td><label for="minCust">Min Customers: </label></td>
-            <td><input type="number" name="minCust" required /></td>
+            <td><input type="number" name="minCust" min="0" required /></td>
           </tr>
           <tr>
             <td><label for="maxCust">Max Customers: </label></td>
-            <td><input type="number" name="maxCust" required /></td>
+            <td><input type="number" name="maxCust" min="0" required /></td>
           </tr>
           <tr>
             <td><label for="avgCPP">Average CPP: </label></td>
-            <td><input type="number" name="avgCPP" step="0.1" required /></td>
+            <td><input type="number" name="avgCPP" min="0" step="0.1" required /></td>
           </tr>
           <tr>
             <td></td>

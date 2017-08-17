@@ -30,9 +30,16 @@ nav {
 
 #navBarHome a {
   float: left;
-  margin: 0.5em 0 0.5em 16%;
+  margin-left: 14%;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   font-family: 'Alegreya', serif;
   font-size: 1.5em;
+}
+
+#navBarHome a:hover {
+  background: url('../imgs/chinook.jpg') no-repeat;
+  background-position: 40%;
+  border-radius: 40%;
 }
 
 #navBarSales a {
