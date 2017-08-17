@@ -50,10 +50,16 @@ var footerMaker = function() {
   var anchorPoint = document.getElementsByTagName('table')[0];
   var tableRow = createAppend('tr', '', '', '', anchorPoint);
   var leftCel = createAppend('th', '', '', 'Totals', tableRow);
+  var grandTotal = 0;
   for (var i = 0; i < hoursOfOp.length; i++) {
-    var totalCel = createAppend('td', '', '', '', tableRow);
+    var hourlyTotal = 0;
+    for (var j = 0; j < shopLocations.length; j++) {
+      hourlyTotal += shopLocations[j].salesReport[i];
+    }
+    var totalCel = createAppend('td', '', '', hourlyTotal, tableRow);
+    grandTotal += hourlyTotal;
   };
-  var rightCel = createAppend('td', '', '', '', tableRow);
+  var rightCel = createAppend('td', '', '', grandTotal, tableRow);
 };
 
 function addNewCookieStore(event) {
