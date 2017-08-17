@@ -10,7 +10,9 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
   this.totalSold = 0,
   this.salesReport = [],
   this.randomCust = function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    var rando =  Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+    return rando;
+
   },
   this.dailySalesGen = function() {
     this.salesReport = [];
@@ -24,7 +26,7 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
     this.dailySalesGen();
     var cont = document.getElementById('header');
     var tableRow = document.createElement('tr');
-    cont.appendChild(tableRow);
+    cont.insertBefore(tableRow, cont.childNodes[1]);
     var storeHeader = document.createElement('th');
     storeHeader.innerText = this.name;
     tableRow.appendChild(storeHeader);
@@ -80,11 +82,18 @@ var footerMaker = function() {
 function addNewCookieStore(event) {
   event.preventDefault();
   var storeName = form.elements['storeName'].value;
-  var minCust = form.elements['minCust'].value;
-  var maxCust = form.elements['maxCust'].value;
-  var avgCPH = form.elements['avgCPH'].value;
+  var minCust = parseInt(form.elements['minCust'].value);
+  var maxCust = parseInt(form.elements['maxCust'].value);
+  console.log(form.elements['avgCPH'].value);
+  console.log(typeof form.elements['avgCPH'].value);
+  var avgCPH = parseFloat(form.elements['avgCPH'].value);
+  console.log(typeof minCust);
+  console.log(typeof maxCust);
+  console.log(typeof avgCPH);
+  console.log(avgCPH);
   var newStore = new CookieShop(storeName, minCust, maxCust, avgCPH);
   newStore.render();
+  form.reset();
 }
 
 var pike = new CookieShop('1st and Pike', 23, 65, 6.3);
@@ -93,7 +102,8 @@ var seaCenter = new CookieShop('Seattle Center', 11, 38, 3.7);
 var capHill = new CookieShop('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieShop('Alki', 2, 16, 4.6);
 
-var shopLocations = [pike, seaTac, seaCenter, capHill, alki];
+// var shopLocations = [alki, capHill, seaCenter, seaTac, pike];
+var shopLocations = [pike];
 
 // Work in progress
 var createAndAppend = function(newElementTag, className, idName, content, parentElement) {
@@ -115,7 +125,6 @@ var tableMaker = function(locationArray){
   }
   footerMaker();
 };
-
 
 var form = document.getElementById('addStoreForm');
 form.addEventListener('submit', addNewCookieStore);
