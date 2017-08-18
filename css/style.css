@@ -141,14 +141,7 @@ h1 {
 }
 
 #fishShirt {
-  /*width: 4%;*/
-  /*bottom: 23em;*/
-  /*left: 44.3em;*/
-  /*float: left;*/
-  /*float: right;*/
-  /*position: absolute;*/
-  /*border: 2px black solid;*/
-  /*filter: brightness(50%);*/
+
 }
 
 #merchList {
@@ -198,8 +191,6 @@ h1 {
 .addressBlock {
   width: 10em;
   float: left;
-  /*padding-bottom: 1em;*/
-  /*margin-bottom: 1em;*/
 }
 
 #leftMenu {
