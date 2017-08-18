@@ -40,6 +40,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f0251', end
 
 #opHours {
   float: right;
+  background-color: white;
+  margin: 1em 0.5em 0 0.5em;
+  padding-right: 0.5em;
+}
+
+#opHours li {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-left: 2em;
+  margin: 0 0 0.2em 0.4em;
 }
 
 nav {
@@ -135,9 +146,11 @@ h1 {
 }
 
 #merchBlock {
-  border: thin black solid;
-  margin: 4em;
-  width: 30em;
+  border: 2px black solid;
+  margin: 5em;
+  width: 33em;
+  height: 328px;
+  background-color: rgb(144, 213, 213);
 }
 
 #fishShirt {
@@ -146,6 +159,8 @@ h1 {
 
 #merchList {
   float: right;
+  margin-right: 1em;
+  margin-top: 1em;
 }
 
 .menuLists {
@@ -176,21 +191,26 @@ h1 {
   padding-bottom: 2em;
   background-color: white;
   height: 12em;
+  font-family: monospace;
+  font-size: 1.5em;
 }
 
 .emailBlock {
   float: left;
   width: 10em;
+  margin-left: 3em;
 }
 
 .phoneBlock {
   width: 10em;
   float: left;
+  margin-left: 3em;
 }
 
 .addressBlock {
   width: 10em;
   float: left;
+  margin-left: 3em;
 }
 
 #leftMenu {
@@ -259,6 +279,13 @@ h1 {
   margin-right: 2em;
   line-height: 1.5em;
 }
+
+#merchList{
+  font-family: serif;
+  font-size: 1.5em;
+  color: black;
+}
+
 label {
   font-size: 0.75em;
 }
