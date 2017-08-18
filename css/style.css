@@ -124,10 +124,20 @@ h1 {
   border: 2px black solid;
 }
 
+#cutterPic {
+  float: left;
+  margin: 0em 7em;
+}
+
+#cookiePic {
+  float: right;
+  margin: 4em 10em;
+}
+
 #merchBlock {
   border: thin black solid;
   margin: 4em;
-  /*margin-right: 4em;*/
+  width: 30em;
 }
 
 #fishShirt {
@@ -141,6 +151,10 @@ h1 {
   /*filter: brightness(50%);*/
 }
 
+#merchList {
+  float: right;
+}
+
 .menuLists {
   margin-top: 5em;
   width: 300px;
@@ -149,8 +163,12 @@ h1 {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  /*border: 0.25em solid black;*/
+  border: 0.25em solid black;
   border-radius: 20%;
+}
+
+#menuTitle {
+  margin-left: 2em;
 }
 
 #schoolPic {
@@ -160,13 +178,11 @@ h1 {
 
 #contactBlock {
   margin-top: 3em;
-  /*margin-bottom: 2em;*/
   padding-left: 2em;
   padding-top: 1em;
   padding-bottom: 2em;
   background-color: white;
   height: 12em;
-  /*display: inline;*/
 }
 
 .emailBlock {
