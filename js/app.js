@@ -3,32 +3,32 @@
 var hoursOfOp = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function CookieShop(name, minCust, maxCust, avgCookPerPerson){
-  this.name = name,
-  this.minCust = minCust,
-  this.maxCust = maxCust,
-  this.avgCookPerPerson = avgCookPerPerson,
-  this.totalSold = 0,
-  this.salesReport = [],
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookPerPerson = avgCookPerPerson;
+  this.totalSold = 0;
+  this.dailySalesReport = [];
   this.randomCust = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 
-  },
+  };
   this.dailySalesGen = function() {
-    this.salesReport = [];
+    this.dailySalesReport = [];
     for(var i = 0; i < hoursOfOp.length; i++) {
       var hourTotal = Math.floor(this.avgCookPerPerson * this.randomCust());
-      this.salesReport.push(hourTotal);
+      this.dailySalesReport.push(hourTotal);
       this.totalSold += hourTotal;
     }
-  },
+  };
   this.render = function() {
     this.dailySalesGen();
-    var cont = document.getElementById('header');
+    var cont = document.getElementById('salesTable');
     var tableRow = document.createElement('tr');
     cont.insertBefore(tableRow, cont.childNodes[1]);
     createAppend('th', '', '', this.name, tableRow);
-    for (var i = 0; i < this.salesReport.length; i++) {
-      createAppend('td', '', '', this.salesReport[i], tableRow);
+    for (var i = 0; i < this.dailySalesReport.length; i++) {
+      createAppend('td', '', '', this.dailySalesReport[i], tableRow);
     };
     createAppend('td', 'lastCel', '', this.totalSold, tableRow);
   };
@@ -36,7 +36,7 @@ function CookieShop(name, minCust, maxCust, avgCookPerPerson){
 
 var headerMaker = function() {
   var anchorPoint = document.getElementById('salesContent');
-  var tableHeader = createAppend('table', '', 'header', '', anchorPoint);
+  var tableHeader = createAppend('table', '', 'salesTable', '', anchorPoint);
   var tHead = createAppend('thead', '', '', '', tableHeader);
   var tableRow = createAppend('tr', '', 'tableHeader', '', tHead);
   var head = createAppend('th', '', '', '', tableRow);
@@ -48,12 +48,18 @@ var headerMaker = function() {
 
 var footerMaker = function() {
   var anchorPoint = document.getElementsByTagName('table')[0];
-  var tableRow = createAppend('tr', '', '', '', anchorPoint);
+  var tableRow = createAppend('tr', '', 'totalsRow', '', anchorPoint);
   var leftCel = createAppend('th', '', '', 'Totals', tableRow);
+  var grandTotal = 0;
   for (var i = 0; i < hoursOfOp.length; i++) {
-    var totalCel = createAppend('td', '', '', '', tableRow);
+    var hourlyTotal = 0;
+    for (var j = 0; j < shopLocations.length; j++) {
+      hourlyTotal += shopLocations[j].dailySalesReport[i];
+    }
+    var totalCel = createAppend('td', '', '', hourlyTotal, tableRow);
+    grandTotal += hourlyTotal;
   };
-  var rightCel = createAppend('td', '', '', '', tableRow);
+  var rightCel = createAppend('td', '', '', grandTotal, tableRow);
 };
 
 function addNewCookieStore(event) {
@@ -61,9 +67,14 @@ function addNewCookieStore(event) {
   var storeName = form.elements['storeName'].value;
   var minCust = parseInt(form.elements['minCust'].value);
   var maxCust = parseInt(form.elements['maxCust'].value);
-  var avgCPH = parseFloat(form.elements['avgCPH'].value);
-  var newStore = new CookieShop(storeName, minCust, maxCust, avgCPH);
+  var avgCPP = parseFloat(form.elements['avgCPP'].value);
+  var newStore = new CookieShop(storeName, minCust, maxCust, avgCPP);
   newStore.render();
+  shopLocations.push(newStore);
+  var oldFooter = document.getElementById('totalsRow');
+  var container = oldFooter.parentNode;
+  container.removeChild(oldFooter);
+  footerMaker();
   form.reset();
 }
 

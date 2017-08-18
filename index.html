@@ -11,17 +11,22 @@
     <header>
       <div class="locationBlock">
         <ul id="locationList">
+          <li><h2 id="locationHeader">Locations:</h2></li>
           <li>1st and Pike</li>
           <li>SeaTac Airport</li>
           <li>Seattle Center</li>
           <li>Capitol Hill</li>
           <li>Alki</li>
         </ul>
+        <ul id="opHours">
+          <li><h2>Hours of operation</hr></li>
+          <li>6:00am-8:00pm</li>
+          <li>7 days a week</li>
+        </ul>
       </div>
-      <p>Hours of operation<p>
       <div id="logo">
         <h1>Pat's Chum Shop</h1>
-        <img src="imgs/salmon.png" alt="Chum shop logo" />
+        <img src="imgs/salmon.png" alt="Chum shop logo" id="salmonPic" />
         <div class="clearfix"></div>
       </div>
       <nav>
@@ -29,6 +34,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#aboutBlock">About</a></li>
           <li><a href="#menuBlock">Menu</a></li>
+          <li><a href="#merchBlock">Merch</a></li>
           <li><a href="#contactBlock">Contact</a></li>
         </ul>
         <div class="clearfix"></div>
@@ -36,30 +42,38 @@
     </header>
     <div id="homeContent">
       <article id="aboutBlock">
-        <h2>about us</h2>
-        <img src="imgs/cannery.jpg" alt="Salmon cannery" id="canPic"/>
+        <h2 id="aboutTitle">about us</h2>
+        <div class="clearfix"></div>
         <div id="paraBlock">
+          <img src="imgs/family.jpg" alt="Really happy looking family" id="famPic" />
          <p id="aboutPara">A Seattle institution with locations scatterd throughout the city. We bring the Puget Sound's most iconic flavors together, gluten-free baked goods and commercial fishing by-product. All of our ingredients are sourced from localy owned, Whole Foods dumpsters by our hard working staff of urban foragers. We hope you enjoy our cookies as much as we enjoy crafting them for you.</p>
       </div>
+      <img src="imgs/cannery.jpg" alt="Salmon cannery" id="canPic" />
       </article>
       <article id="menuBlock">
+        <img src="imgs/cutter.jpeg" alt="Fish shaped cookie cutter" id="cutterPic" />
+        <img src="imgs/frosted-cookie.jpg" alt="Fish shaped cookie" id="cookiePic" />
         <div class="menuLists">
-          <h2>menu</h2>
+          <h2 id="menuTitle">menu</h2>
           <ul id="leftMenu">
             <li>chocolate chip</li>
             <li>biscotti</li>
             <li>shortbread</li>
             <li>macaroon</li>
           </ul>
-          <ul id="rightMenu">
-            <li>snickerdoodle</li>
-            <li>Black and white</li>
-            <li>peanut butter</li>
-            <li>oatmeal raisin</li>
-          </ul>
         </div>
         <div class="clearfix"></div>
       </article>
+    </div>
+    <div id="merchBlock">
+      <img src="imgs/shirt.jpg" alt="Really cool looking salmon shirt" id="fishShirt" />
+
+      <ul id="merchList">
+        <li><h2>Comming soon!</h2></li>
+        <li>Shirts</li>
+        <li>Hats</li>
+        <li>Socks</li>
+      </ul>
     </div>
     <footer id="contactBlock">
         <h3>Contact Us</h3>
@@ -75,6 +89,7 @@
             <h4>address</h4>
             <p>Shilshole<br>Old Ballard<br>Seattle, WA 98107</p>
           </div>
+      <img src="imgs/fish.jpg" alt="A school of fish" id="schoolPic">
     </footer>
   </body>
 </html>

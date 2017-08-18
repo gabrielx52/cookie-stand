@@ -19,6 +19,29 @@ background: linear-gradient(to bottom, rgba(159,2,81,1) 0%,rgba(236,121,154,1) 1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f0251', endColorstr='#4d8963',GradientType=0 ); /* IE6-9 */
 }
 
+#locationList {
+  margin: 1em 0.5em 0 0.5em;
+  padding-right: 0.5em;
+  float: left;
+  background-color: white;
+}
+
+#locationHeader {
+  font-weight: 400;
+}
+
+#locationList li {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-left: 2em;
+  margin: 0 0 0.2em 0.4em;
+}
+
+#opHours {
+  float: right;
+}
+
 nav {
   border-bottom: 1px solid grey;
   background-color: #9F0251;
@@ -30,14 +53,21 @@ nav {
 
 #navBarHome a {
   float: left;
-  margin: 0.5em 0 0.5em 16%;
+  margin-left: 6em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   font-family: 'Alegreya', serif;
   font-size: 1.5em;
 }
 
+#navBarHome a:hover {
+  background: url('../imgs/chinook.jpg') no-repeat;
+  background-position: 40%;
+  border-radius: 40%;
+}
+
 #navBarSales a {
   float: left;
-  margin: 0.5em 45% 0.5em;
+  margin: 0.5em 10em 0.5em;
   font-family: 'Alegreya', serif;
   font-size: 1.5em;
 }
@@ -50,16 +80,18 @@ nav {
   width: 787px;
   height: 246px;
   position: relative;
-  margin: auto;
+  margin-left: 4em;
   margin-bottom: 3em;
 }
 
-#salmon {
-  position: absolute;
+#salmonPic {
+  margin-top: -12em;
+  margin-left: 9em;
 }
 
+
 h1 {
-  margin-left: 4.6em;;
+  margin-left: 7.6em;
   z-index: 100;
   position: absolute;
   color: rgba(40, 251, 138);
@@ -68,23 +100,65 @@ h1 {
   font-size: 3em;
 }
 
-#homeContent h2 {
-  text-align: center;
+#aboutTitle {
+  margin-left: 3.5em;
+}
+
+#aboutBlock {
+
 }
 
 #canPic {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 38em;
+  margin-left: 1em;
   border-radius: 20%;
   border: 1em solid black;
-  margin-bottom: 4em;
+  filter: brightness(150%);
+}
+
+#famPic {
+  width: 59%;
+  float: left;
+  margin-right: 0.5em;
+  border-radius: 33% 0 0 0;
+  border: 2px black solid;
+}
+
+#cutterPic {
+  float: left;
+  margin: 0em 7em;
+}
+
+#cookiePic {
+  float: right;
+  margin: 4em 10em;
+}
+
+#merchBlock {
+  border: thin black solid;
+  margin: 4em;
+  width: 30em;
+}
+
+#fishShirt {
+  /*width: 4%;*/
+  /*bottom: 23em;*/
+  /*left: 44.3em;*/
+  /*float: left;*/
+  /*float: right;*/
+  /*position: absolute;*/
+  /*border: 2px black solid;*/
+  /*filter: brightness(50%);*/
+}
+
+#merchList {
+  float: right;
 }
 
 .menuLists {
-  margin-top: 3em;
-  width: 18em;
-  height:12em;
+  margin-top: 5em;
+  width: 300px;
+  height: 300px;
   font-size: 1.5em;
   background-color: white;
   margin-left: auto;
@@ -93,16 +167,45 @@ h1 {
   border-radius: 20%;
 }
 
+#menuTitle {
+  margin-left: 2em;
+}
+
+#schoolPic {
+  float: right;
+  height:9em;
+}
+
+#contactBlock {
+  margin-top: 3em;
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  background-color: white;
+  height: 12em;
+}
+
+.emailBlock {
+  float: left;
+  width: 10em;
+}
+
+.phoneBlock {
+  width: 10em;
+  float: left;
+}
+
+.addressBlock {
+  width: 10em;
+  float: left;
+  /*padding-bottom: 1em;*/
+  /*margin-bottom: 1em;*/
+}
+
 #leftMenu {
   margin-top: 5%;
   margin-left: 16%;
   float: left;
-}
-
-#rightMenu {
-  margin-top: 5%;
-  float: left;
-  margin-left: 5%;
 }
 
 #salesContent table {
@@ -143,17 +246,27 @@ h1 {
   padding: 2px;
 }
 
+#aboutTitle {
+  font-family: cursive;
+  margin-top: 1em;
+  font-size: 2.5em;
+}
+
 #paraBlock {
+  float: left;
   width: 30em;
   height: 20em;
   background-color: white;
   border: 0.25em solid black;
   border-radius: 20%;
-  margin: auto;
+  margin-left: 8em;
 }
 
 #aboutPara {
-  margin-top: 5em;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  line-height: 1.5em;
 }
 label {
   font-size: 0.75em;
