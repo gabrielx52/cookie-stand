@@ -1,11 +1,20 @@
 
 body {
   background-color: #FFE1E6;
+  height: 100%;
 }
 
 header {
-  /*background-color: #eedbd1;*/
   font-family: 'EB Garamond', serif;
+  height: 100%;
+}
+
+.cookieFont {
+  font-family: 'Cookie', cursive;
+}
+
+.text_center {
+  text-align: center;
 }
 
 #locationList {
@@ -64,30 +73,39 @@ nav {
   clear: both;
 }
 
-
-#salmonPic {
+#oval {
   bottom: 5em;
   position: relative;
-  margin-left: 42%;
-  width: 15%;
+  height: 10em;
+  width: 28em;
+  border-radius: 66%;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border: 1px #E1B378 solid;
 }
-
 
 h1 {
   font-size: 2.75em;
-  bottom: 2em;
-  font-family: 'Cookie', cursive;
-  width: 20%;
-  position: relative;
+  width: 80%;
+  margin: 2% 10%;
+  position: absolute;
   text-align: center;
-  margin-left: 40%;
   color: #4D8963;
+}
+
+#salmonPic {
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 8%;
+  width: 70%;
 }
 
 #canPic {
   margin: .5%;
   width: 99%;
   filter: brightness(64%);
+  margin-bottom: 1em;
 }
 
 #quote {
@@ -96,22 +114,37 @@ h1 {
   width: 46%;
   font-size: 2.15em;
   margin-left: 27%;
-  top: -5em;
+  top: -7em;
   z-index: 100;
   font-style: italic;
   line-height: 1.15;
   text-align: center;
 }
 
-#aboutTitle {
-
-}
 
 #aboutBlock {
-
+  background-color: white;
+  bottom: 9em;
+  margin: 1em auto 10%;
+  position: relative;
+  width: 100%;
 }
 
-#whiteBar {
+#aboutHead {
+  text-align: center;
+  font-size: 3em;
+  line-height: 3;
+}
+
+#bioPara {
+  font-size: 1.25em;
+  line-height: 1.25;
+  width: 55%;
+  margin: 0 auto;
+  padding-bottom: 8%;
+}
+
+#photoBar {
   background-color: #E0CC97;
   height:320px;
 }
@@ -163,11 +196,11 @@ h1 {
 }
 
 #merchBlock {
-  border: 2px black solid;
+  /*border: 2px black solid;
   margin: 5em;
   width: 33em;
   height: 328px;
-  background-color: rgb(144, 213, 213);
+  background-color: rgb(144, 213, 213);*/
 }
 
 #fishShirt {
@@ -175,13 +208,13 @@ h1 {
 }
 
 #merchList {
-  float: right;
+  /*float: right;
   margin-right: 1em;
-  margin-top: 1em;
+  margin-top: 1em;*/
 }
 
 .menuLists {
-  margin-top: 5em;
+  /*margin-top: 5em;
   width: 300px;
   height: 300px;
   font-size: 1.5em;
@@ -189,17 +222,11 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   border: 0.25em solid black;
-  border-radius: 20%;
+  border-radius: 20%;*/
 }
 
 #menuTitle {
-  margin-left: 2em;
-}
-
-#schoolPic {
-  width: 15%;
-  margin-left: 42.5%;
-  filter: opacity(0.12);
+  /*margin-left: 2em;*/
 }
 
 #contactBlock {
@@ -213,23 +240,6 @@ h1 {
   font-size: 1.5em;*/
 }
 
-.emailBlock {
-  /*float: left;
-  width: 10em;
-  margin-left: 3em;*/
-}
-
-.phoneBlock {
-  /*width: 10em;
-  float: left;
-  margin-left: 3em;*/
-}
-
-.addressBlock {
-  /*width: 10em;
-  float: left;
-  margin-left: 3em;*/
-}
 
 #leftMenu {
   margin-top: 5%;
@@ -336,4 +346,46 @@ form table {
 @keyframes flash {
   from {color: red;}
   to {color: black;}
+}
+
+
+.emailBlock {
+  position: absolute;
+}
+
+.phoneBlock {
+  position: absolute;
+
+}
+
+.addressBlock {
+  position: absolute;
+}
+
+#fishSchool {
+  height: 100%;
+  background-image: url("../imgs/fish.jpg");
+  background-size: 10%;
+  filter: opacity(0.12);
+}
+
+#schoolPic {
+  width: 15%;
+  margin-left: 42.5%;
+  filter: opacity(0.1);
+}
+
+footer {
+  margin-top: 0.5em;
+  height: 12em;
+  background-color: #4D8963;
+  font-size: 0.5em;
+}
+
+h3 {
+  text-align: center;
+  position: absolute;
+  margin: 0.5em 40%;
+  width: 20%;
+  font-size: 2em;
 }
