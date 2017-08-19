@@ -111,47 +111,55 @@ h1 {
 
 }
 
+#whiteBar {
+  background-color: #E0CC97;
+  height:320px;
+}
+
 #photoBlock {
-  height: 302px;
+  top: 5px;
+  height: 300px;
   position: relative;
   margin: 0.5em;
-  border: black solid 2px;
-  box-sizing: content-box; 
+  box-sizing: content-box;
+  width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: white solid 5px;
 }
 
 #familyPic {
-  width: 40.67%;
+  width: 400px;
   position: absolute;
   top: 0;
 }
 
 #filler400_70 {
-  width: 40.67%;
+  width: 400px;
   position: absolute;
   left: 0;
   bottom: 0;
-  border-top: 0.5em solid #FFE1E6;
 }
 
 #cutterPic {
-  width: 28.6%;
   position: absolute;
   top: 0;
-  left: 27.5em;
-}
-
-#cookiePic {
-  width: 26%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  left: 405px;
 }
 
 #filler260_130{
-  width: 26%;
+  width: 260px;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+#cookiePic {
+  width: 260px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 #merchBlock {
