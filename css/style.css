@@ -111,23 +111,25 @@ h1 {
 
 }
 
+#cookiePic {
+  width: 30.25%
+}
 
-#famPic {
-  width: 59%;
-  float: left;
-  margin-right: 0.5em;
-  border-radius: 33% 0 0 0;
-  border: 2px black solid;
+#familyPic {
+  width: 40.67%;
+}
+
+#filler400_70 {
+  width: 40.67%;
 }
 
 #cutterPic {
-  float: left;
-  margin: 0em 7em;
+  width: 26%;
 }
 
-#cookiePic {
-  float: right;
-  margin: 4em 10em;
+
+#filler260_130{
+  width: 26%;
 }
 
 #merchBlock {
