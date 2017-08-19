@@ -1,6 +1,6 @@
 
 body {
-  background-color: #FFE1E6
+  background-color: #FFE1E6;
 }
 
 header {
@@ -111,25 +111,47 @@ h1 {
 
 }
 
-#cookiePic {
-  width: 30.25%
+#photoBlock {
+  height: 302px;
+  position: relative;
+  margin: 0.5em;
+  border: black solid 2px;
+  box-sizing: content-box; 
 }
 
 #familyPic {
   width: 40.67%;
+  position: absolute;
+  top: 0;
 }
 
 #filler400_70 {
   width: 40.67%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 0.5em solid #FFE1E6;
 }
 
 #cutterPic {
-  width: 26%;
+  width: 28.6%;
+  position: absolute;
+  top: 0;
+  left: 27.5em;
 }
 
+#cookiePic {
+  width: 26%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 #filler260_130{
   width: 26%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #merchBlock {
