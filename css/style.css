@@ -17,6 +17,12 @@
   font-weight: 600;
 }
 
+.hr {
+  margin: 0 30%;
+  border-style: solid;
+  color: #9F0251;
+}
+
 body {
   background-color: #FFE1E6;
   height: 100%;
@@ -132,12 +138,11 @@ h1 {
   font-family: 'Josefin Slab', serif;
 }
 
-
 #aboutBlock {
   overflow: hidden;
   background-color: white;
   bottom: 9em;
-  margin: 4em auto 10%;
+  margin: 4em auto -7em;
   position: relative;
   width: 100%;
   height: 24em;
@@ -148,6 +153,7 @@ h1 {
   font-size: 3em;
   line-height: 3;
   height: 2.5em;
+  color: #4D8963;
 }
 
 #bioPara {
@@ -160,13 +166,48 @@ h1 {
   text-indent: 3em;
 }
 
-
 #chinookPic {
   width: 44%;
   position: relative;
   margin-left: 28%;
   bottom: 4.65em;
 }
+
+#menuBlock {
+  height: 36em;
+  position: relative;
+}
+
+#menuHead {
+  text-align: center;
+  font-size: 3em;
+  line-height: 3;
+  height: 2.1em;
+  color: #9F0251;
+}
+
+#menuList {
+  margin: 4em 39%;
+  width: 24%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+ #menuList li {
+   margin: 0.5em 0 1.2em;
+ }
+
+ .cookie {
+   font-weight: 400;
+   font-size: 1.5em;
+   text-transform: uppercase;
+   color: #4D8963;
+ }
+
+ .cookieDesc {
+   text-transform: lowercase;
+   text-indent: 1em;
+   color:  #69A583;
+ }
 
 #photoBar {
   background-color: #E0CC97;
