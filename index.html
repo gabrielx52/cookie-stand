@@ -2,35 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya:900" rel="stylesheet">
+
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <title>Homeport</title>
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Josefin+Slab:300,600|Josefin+Sans:300,400" rel="stylesheet">
+    <title>Coho Bakeshop</title>
   </head>
   <body>
-    <header>
-      <div class="locationBlock">
-        <ul id="locationList">
-          <li><h2 id="locationHeader">Locations:</h2></li>
-          <li>1st and Pike</li>
-          <li>SeaTac Airport</li>
-          <li>Seattle Center</li>
-          <li>Capitol Hill</li>
-          <li>Alki</li>
-        </ul>
-        <ul id="opHours">
-          <li><h2>Hours of operation</hr></li>
-          <li>6:00am-8:00pm</li>
-          <li>7 days a week</li>
-        </ul>
-      </div>
-      <div id="logo">
-        <h1>Pat's Chum Shop</h1>
+    <header class="slab">
+      <ul id="locationList">
+        <li>1st and Pike</li>
+        <li>SeaTac Airport</li>
+        <li>&centerdot;Seattle Center&centerdot;</li>
+        <li>Capitol Hill</li>
+        <li>Alki</li>
+      </ul>
+      <ul id="opHours">
+        <li><h2>Hours of operation</hr></li>
+        <li>&centerdot;6:00am-8:00pm&centerdot;</li>
+        <li>7 days a week</li>
+      </ul>
+      <div id="oval">
+        <h1 class="cookieFont">&centerdot;Coho  Bakeshop&centerdot;</h1>
         <img src="imgs/salmon.png" alt="Chum shop logo" id="salmonPic" />
-        <div class="clearfix"></div>
       </div>
       <nav>
-        <ul id="navBarHome">
+        <ul class="slab" id="navBarHome">
           <li><a href="index.html">Home</a></li>
           <li><a href="#aboutBlock">About</a></li>
           <li><a href="#menuBlock">Menu</a></li>
@@ -41,55 +38,72 @@
       </nav>
     </header>
     <div id="homeContent">
+      <img src="imgs/salmon_banner.png" alt="Salmon cannery" id="canPic" />
+      <p id="quote"><em>We bring the Puget Sound's most iconic flavors together: gluten-free baked goods and commercial fishing by-product.</em></p>
       <article id="aboutBlock">
-        <h2 id="aboutTitle">about us</h2>
-        <div class="clearfix"></div>
-        <div id="paraBlock">
-          <img src="imgs/family.jpg" alt="Really happy looking family" id="famPic" />
-         <p id="aboutPara">A Seattle institution with locations scatterd throughout the city. We bring the Puget Sound's most iconic flavors together, gluten-free baked goods and commercial fishing by-product. All of our ingredients are sourced from localy owned, Whole Foods dumpsters by our hard working staff of urban foragers. We hope you enjoy our cookies as much as we enjoy crafting them for you.</p>
-      </div>
-      <img src="imgs/cannery.jpg" alt="Salmon cannery" id="canPic" />
+        <h2 class="cookieFont text_center" id="aboutHead">about us</h2>
+         <p id="bioPara">A Seattle institution with locations scatterd throughout the city. We handcraft our small-batch, artisinal products in a derelict fishing vessel ran aground in the Puget Sound. All of our ingredients are sustainably harvested from localy owned Whole Foods dumpsters by our hard working staff of urban foragers. We hope you enjoy our cookies as much as we enjoy crafting them for you.</p>
+         <img src="imgs/chinook.jpg" alt="Really cool picture of a chinook" id="chinookPic"/>
       </article>
       <article id="menuBlock">
-        <img src="imgs/cutter.jpeg" alt="Fish shaped cookie cutter" id="cutterPic" />
-        <img src="imgs/frosted-cookie.jpg" alt="Fish shaped cookie" id="cookiePic" />
-        <div class="menuLists">
-          <h2 id="menuTitle">menu</h2>
-          <ul id="leftMenu">
-            <li>chocolate chip</li>
-            <li>biscotti</li>
-            <li>shortbread</li>
-            <li>macaroon</li>
-          </ul>
-        </div>
-        <div class="clearfix"></div>
+        <h2 class="cookieFont text_center" id="menuHead">menu</h2>
+        <hr class="hr">
+        <ul id="menuList">
+          <li>
+            <h4 class="cookie">Anise &amp; Chum Biscotti</h3>
+            <p class="cookieDesc">Sicilian pine nuts, fennel pollen, dog food</p>
+          </li>
+          <li>
+            <h4 class="cookie">Smoked Chocolate Chip</h3>
+            <p class="cookieDesc">sel gris, black walnut, nova</p>
+          </li>
+          <li>
+            <h4 class="cookie">Copper River Oatmeal</h3>
+            <p class="cookieDesc">sultana, irish oats, sockeye</p>
+          </li>
+          <li>
+            <h4 class="cookie">Arctic Char Peanut Butter</h3>
+            <p class="cookieDesc">tupelo honey, bergamont, gravlax</p>
+          </li>
+          <li>
+            <h4 class="cookie">Salar Roe Macaron</h3>
+            <p class="cookieDesc">framboise, Tellicherry, ikura</p>
+          </li>
+        </ul>
       </article>
+      <div id="photoBar">
+        <div id="photoBlock">
+          <img src="imgs/family.jpg" alt="Happy looking family with a dark secret" id="familyPic" />
+          <img src="imgs/400_70.png" alt="Filler pic 400 x 70 px" id="filler400_70"/>
+          <img src="imgs/cutter.jpeg" alt="Fish shaped cookie cutter" id="cutterPic" />
+          <img src="imgs/260_130.png" alt="Filler pic 260 x 130 px" id="filler260_130" />
+          <img src="imgs/frosted-cookie.jpg" alt="Fish shaped cookie" id="cookiePic" />
+        </div>
+      </div>
     </div>
     <div id="merchBlock">
-      <img src="imgs/shirt.jpg" alt="Really cool looking salmon shirt" id="fishShirt" />
-
-      <ul id="merchList">
-        <li><h2>Comming soon!</h2></li>
-        <li>Shirts</li>
-        <li>Hats</li>
-        <li>Socks</li>
-      </ul>
+      <div id="polaroid">
+        <img src="imgs/shirt.jpg" alt="Really cool looking salmon shirt" id="fishShirt" />
+      </div>
+      <h2 class="cookieFont text_center" id="merchHead">merch</h2>
+      <p class="cookieFont text_center" id="soon">&centerdot;comming soon&centerdot;</p>
     </div>
-    <footer id="contactBlock">
-        <h3>Contact Us</h3>
+    <footer class="slab">
+        <h3 id="contactBlock">Contact Us</h3>
           <div class="emailBlock">
-            <h4>email</h4>
+            <h4 class="allCaps">email</h4>
             <a href="mailto:contact@ChumShop.ru">contact@cannery.com</a>
           </div>
           <div class="phoneBlock">
-            <h4>phone</h4>
+            <h4 class="allCaps">phone</h4>
             <p>(206)789-5555
           </div>
           <div class="addressBlock">
-            <h4>address</h4>
+            <h4 class="allCaps">address</h4>
             <p>Shilshole<br>Old Ballard<br>Seattle, WA 98107</p>
           </div>
-      <img src="imgs/fish.jpg" alt="A school of fish" id="schoolPic">
+        <div id="fishSchool">
+        </div>
     </footer>
   </body>
 </html>
