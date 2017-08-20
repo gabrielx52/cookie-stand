@@ -1,3 +1,21 @@
+.cookieFont {
+  font-family: 'Cookie', cursive;
+}
+
+.slab {
+  font-family: 'Josefin Slab', serif;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.allCaps {
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+  font-size: 1.04em;
+  font-weight: 600;
+}
 
 body {
   background-color: #FFE1E6;
@@ -5,16 +23,7 @@ body {
 }
 
 header {
-  font-family: 'EB Garamond', serif;
   height: 100%;
-}
-
-.cookieFont {
-  font-family: 'Cookie', cursive;
-}
-
-.text_center {
-  text-align: center;
 }
 
 #locationList {
@@ -33,6 +42,7 @@ header {
 
 nav {
   background-color: #E0CC97;
+  font-weight: 600;
 }
 
 #navBar {
@@ -47,7 +57,6 @@ nav {
 
 #navBarHome a {
   float: left;
-  font-family: 'EB Garamond', serif;
   font-size: 1.25em;
   color: black;
   text-align: center;
@@ -57,9 +66,10 @@ nav {
 
 #navBarHome a:hover {
   /*background: url('../imgs/chinook.jpg') no-repeat;
-  background-position: 40%;
-  border-radius: 40%;
-  width: 40%;*/
+  background-position: 40%;*/
+  /*border-radius: 40%;*/
+  /*width: 100%;*/
+  /*filter: opacity(0.1);*/
 }
 
 #navBarSales a {
@@ -116,24 +126,28 @@ h1 {
   margin-left: 27%;
   top: -7em;
   z-index: 100;
-  font-style: italic;
+  font-weight: 600;
   line-height: 1.15;
   text-align: center;
+  font-family: 'Josefin Slab', serif;
 }
 
 
 #aboutBlock {
+  overflow: hidden;
   background-color: white;
   bottom: 9em;
-  margin: 1em auto 10%;
+  margin: 4em auto 10%;
   position: relative;
   width: 100%;
+  height: 24em;
 }
 
 #aboutHead {
   text-align: center;
   font-size: 3em;
   line-height: 3;
+  height: 2.5em;
 }
 
 #bioPara {
@@ -142,6 +156,16 @@ h1 {
   width: 55%;
   margin: 0 auto;
   padding-bottom: 8%;
+  font-family: 'Josefin Slab', serif;
+  text-indent: 3em;
+}
+
+
+#chinookPic {
+  width: 44%;
+  position: relative;
+  margin-left: 28%;
+  bottom: 4.65em;
 }
 
 #photoBar {
@@ -179,6 +203,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 405px;
+  transform: rotate(90deg) scaleX(-1);
 }
 
 #filler260_130{
@@ -348,18 +373,33 @@ form table {
   to {color: black;}
 }
 
+/* Footer CSS below */
 
 .emailBlock {
+  font-size: 2em;
+  width: 20%;
+  margin-left: 15%;
   position: absolute;
+  text-align: center;
+  margin-top: 2em;
 }
 
 .phoneBlock {
+  font-size: 2em;
+  width: 20%;
+  margin-left: 65%;
   position: absolute;
-
+  text-align: center;
+  margin-top: 2em;
 }
 
 .addressBlock {
+  font-size: 2em;
+  width: 20%;
+  margin-left: 40%;
   position: absolute;
+  text-align: center;
+  margin-top: 2em;
 }
 
 #fishSchool {
@@ -376,7 +416,7 @@ form table {
 }
 
 footer {
-  margin-top: 0.5em;
+  margin-top: 4em;
   height: 12em;
   background-color: #4D8963;
   font-size: 0.5em;
