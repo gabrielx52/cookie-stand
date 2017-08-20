@@ -2,22 +2,39 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya:900" rel="stylesheet">
+
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/salesStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Josefin+Slab:300,600|Josefin+Sans:300,400|Source+Code+Pro:300" rel="stylesheet">
     <title>Sales Data</title>
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <h1>Pat's Sales Data</h1>
-        <p id="disclaim">For internal use only</p>
-        <img src="imgs/salmon.png" alt="Chum shop logo" />
-        <div class="clearfix"></div>
+    <header class="slab">
+      <ul id="locationList">
+        <li>1st and Pike</li>
+        <li>SeaTac Airport</li>
+        <li>&centerdot;Seattle Center&centerdot;</li>
+        <li>Capitol Hill</li>
+        <li>Alki</li>
+      </ul>
+      <ul id="opHours">
+        <li><h2>Hours of operation</hr></li>
+        <li>&centerdot;6:00am-8:00pm&centerdot;</li>
+        <li>7 days a week</li>
+      </ul>
+      <p id="disclaim">For internal use only</p>
+      <div id="oval">
+        <h1 class="cookieFont">&centerdot;Coho  Bakeshop&centerdot;</h1>
+        <img src="imgs/salmon.png" alt="Chum shop logo" id="salmonPic" />
       </div>
       <nav>
-        <ul id="navBarSales">
-          <li><a href="index.html">User Site</a></li>
+        <ul class="slab" id="navBarHome">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#aboutBlock">About</a></li>
+          <li><a href="index.html#menuBlock">Menu</a></li>
+          <li><a href="index.html#merchBlock">Merch</a></li>
+          <li><a href="index.html#contactBlock">Contact</a></li>
         </ul>
         <div class="clearfix"></div>
       </nav>
@@ -28,7 +45,7 @@
     </div>
     <div id="formBox">
       <form id="addStoreForm">
-        <table>
+        <table id="formTable">
           <tr>
             <td><label for="storeName">Store Name: </label></td>
             <td><input type="text" name="storeName" required /></td>
@@ -52,7 +69,23 @@
         </table>
       </form>
     </div>
-    <br>
+    <footer class="slab">
+        <h3 id="contactBlock">Contact Us</h3>
+          <div class="emailBlock">
+            <h4 class="allCaps">email</h4>
+            <a href="mailto:contact@ChumShop.ru">contact@cannery.com</a>
+          </div>
+          <div class="phoneBlock">
+            <h4 class="allCaps">phone</h4>
+            <p>(206)789-5555
+          </div>
+          <div class="addressBlock">
+            <h4 class="allCaps">address</h4>
+            <p>Shilshole<br>Old Ballard<br>Seattle, WA 98107</p>
+          </div>
+        <div id="fishSchool">
+        </div>
+    </footer>
   </body>
   <script type="text/javascript" src="js/app.js"></script>
 </html>

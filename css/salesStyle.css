@@ -1,0 +1,122 @@
+.cookieFont {
+  font-family: 'Cookie', cursive;
+}
+
+.slab {
+  font-family: 'Josefin Slab', serif;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.allCaps {
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+body {
+  background-color: #FFE1E6;
+  height: 100%;
+}
+
+header {
+  height: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#salesContent {
+  position: relative;
+  margin-top: 2em;
+  height: 18em;
+}
+
+#salesContent table {
+  background-color: white;
+  margin-left: 27%;
+  font-family: 'Source Code Pro', monospace;
+}
+
+#salesContent tr:nth-child(odd){
+  background-color: #EC799A;
+}
+
+#salesContent tr:nth-child(even){
+  background-color: #9F0251;
+}
+
+#salesContent tr {
+  font-size: 1.13em;
+  width:2.2em;
+}
+
+#salesContent #tableHeader {
+  background-color: #4D8963;
+  color: #E0CC97;
+}
+
+#salesContent td {
+  text-align: right;
+  padding: 2px;
+}
+
+#salesContent th {
+  font-weight: bold;
+  margin: 3em;
+  padding: 2px;
+}
+
+label {
+  font-size: 0.75em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+form table {
+  margin: auto;
+  margin-top: 1em;
+}
+
+#formBox {
+  top: -18em;
+  position: relative;
+  margin-left: 3%;
+  width: 20%;
+  height: 10em;
+  border: black solid thin;
+  background-color: white;
+}
+
+#formBox:hover {
+  background-color: #FEFBF7;
+}
+
+#formTable tr {
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+
+#disclaim {
+  animation-name: flash;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  margin-left: 35%;
+  font-size: 1.5em;
+  width: 30%;
+  position: relative;
+  top: 5em;
+  text-align: center;
+  font-weight: 600;
+}
+
+@keyframes flash {
+  from {color: red;}
+  to {color: black;}
+}
